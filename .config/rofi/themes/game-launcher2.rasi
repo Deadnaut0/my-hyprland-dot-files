@@ -1,0 +1,136 @@
+
+/**
+ * ROFI Layout 
+ *
+ * Game launcher : span vertical left 
+ * 
+ */
+@theme "~/.config/rofi/wallust/colors-rofi.rasi"
+// Config //
+configuration {
+    modi:                        "games";
+    show-icons:                  true;
+    display-format:         "{name}";
+    font:                        "JetBrainsMono Nerd Font 12";
+}
+
+
+
+// Main //
+window {
+    enabled:                     true;
+    fullscreen:                  false;
+    width:                       35%;
+    height:                      100%;
+    location:                    west;
+    transparency:                "real";
+    cursor:                      "default";
+    spacing:                     0em;
+    padding:                     0em;
+    border:                      2px;
+    border-radius:               12px;
+    border-color:                @active-background;
+    background-color:            transparent;
+}
+mainbox {
+    enabled:                     true;
+    orientation:                vertical;
+    children:                    ["inputbar", "listview" ];
+    border-radius:              12px;
+    background-image:           url("~/.config/rofi/.current_wallpaper", height);
+}
+inputbar {
+    enabled:                    true;
+    text-color:                 @foreground;
+    spacing:                    20px;
+    border-radius:              12px;
+    padding:                    14px;
+    border-color:               @foreground;
+	background-color:		    @background;
+    children:                   ["textbox-prompt-colon", "entry" ];
+    border:                     1px;
+    border-color:               @active-background;
+    margin:                      15px 15px 0px 15px;
+}
+textbox-prompt-colon {
+    enabled:                    true;
+	padding:					10px 0px 10px 10px;
+    expand:                     false;
+    str:                        "🕹️";
+    text-color:                 inherit;
+	background-color:			transparent;
+  height: 100%;
+}
+
+entry {
+    enabled:                    true;
+	padding:					10px 0px 10px 0px;
+    text-color:                 @foreground;
+    cursor:                     text;
+    placeholder:                "Search your games";
+    placeholder-color:          inherit;
+	background-color:			transparent;
+}
+
+
+// Lists //
+listview {
+    enabled:                     true;
+    columns:                     3;
+    spacing:                     1.25em;
+    padding:                     0.6em 3em 2.5em 3em;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     true;
+    fixed-height:                true;
+    fixed-columns:               true;
+    cursor:                      "default";
+    background-color:           @background;
+    text-color:                 @foreground;
+    margin:                      15px;
+    border-radius:               12px;
+    border:                     1px;
+    border-color:               @active-background;
+}
+
+
+// Elements //
+element {
+    enabled:                     true;
+    orientation:                 vertical;
+    spacing:                     0em;
+    padding:                     0.2em;
+    border-radius:               12px;
+    border:                     1px;
+    border-color:               @active-background;
+    cursor:                      pointer;
+    background-color:            @color1;
+    text-color:                  @foreground;
+
+}
+element selected.normal {
+    background-color:            @color11;
+    text-color:                  @foreground;
+}
+element-icon {
+    size:                        20%;
+    spacing:                     0em;
+    padding:                     0em;
+    cursor:                      inherit;
+    border-radius:               13px;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+element-text {
+    enabled:                     true;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+    spacing:                     0em;
+    padding:                     0.3em;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+

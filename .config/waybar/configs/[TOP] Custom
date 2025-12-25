@@ -1,0 +1,48 @@
+/* ----MY Own Custom Waybar---- */
+// Custom
+
+{
+"include": [
+  "$HOME/.config/waybar/Modules",
+  "$HOME/.config/waybar/ModulesWorkspaces",
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesGroups",
+  "$HOME/.config/waybar/UserModules",
+  ],
+"layer": "top",
+"position": "top",
+"height": 14,
+"margin-left": 10,
+"margin-right": 10,
+"margin-top": 2,
+	
+"modules-left": [
+	"custom/menu",
+  "custom/separator#blank",
+  "custom/cava_mviz",
+  "mpris",
+	"custom/separator#blank",
+	"hyprland/workspaces#pacman",
+],
+
+"modules-center": [
+	"idle_inhibitor",
+	"custom/separator#blank",
+	"clock#3",
+	"custom/separator#blank",
+	"group/notify"
+],
+		
+"modules-right": [
+  "hyprland/window",
+	"tray",
+	"custom/separator#line",
+  "group/laptop",
+	"group/audio",
+	"custom/separator#line",
+	"group/mobo_drawer",
+  "custom/separator#line",
+	"custom/nightlight",
+	"custom/power",					
+	],
+}
